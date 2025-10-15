@@ -2,14 +2,20 @@
     "workbench.startupEditor": "none",
     "editor.accessibilitySupport": "off",
 
-    "workbench.colorTheme": "Vesper",
     "workbench.iconTheme": "chalice-icon-theme",
+    "workbench.colorTheme": "Vesper",
+    "workbench.colorCustomizations": {
+        "[Vesper]": {
+            "statusBar.background": "#212121",
+            "statusBar.noFolderBackground": "#212121",
+            "statusBar.border": "#323232"
+        }
+    },
+
     "editor.fontFamily": "IBM Plex Mono",
     "editor.fontSize": 13,
     "editor.lineHeight": 1.4,
     "terminal.integrated.lineHeight": 1.1,
-
-    "workbench.editor.showTabs": "none",
     "breadcrumbs.enabled": false,
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
@@ -19,13 +25,48 @@
     "workbench.activityBar.location": "hidden",
     "workbench.sideBar.location": "right",
 
-    "workbench.statusBar.visible": false,
     "editor.stickyScroll.enabled": false,
+    "workbench.editor.showTabs": "none",
 
     "terminal.integrated.defaultProfile.osx": "fish",
+
+    // git
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
 
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
     },
     "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<leader>", "q"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["[", "b"],
+            "commands": [":bp"]
+        },
+        {
+            "before": ["]", "b"],
+            "commands": [":bn"]
+        }
+    ],
+    
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
 }
